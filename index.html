@@ -106,6 +106,28 @@
               
             </h4>
           </div>
+          <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Audio Player</title>
+            <style>
+                .audio-player {
+                    width: 100px; /* Điều chỉnh kích thước theo ý muốn */
+                }
+            </style>
+        </head>
+        <body>
+            <audio controls autoplay muted class="audio-player">
+                <source src="image/em-dong-y-i-do-duc-phuc-911-khac-hung-nhacchuongviet.com.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        
+            <script>
+                // Bỏ tắt âm thanh khi trang tải xong
+                document.querySelector('.audio-player').muted = false;
+            </script>
+        </body>
+          
           <div>
             <ul id="hitungmundur">
               <li><span class="days">23</span><p class="days_text">DAY</p></li>
