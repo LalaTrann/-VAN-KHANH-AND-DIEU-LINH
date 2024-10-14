@@ -114,19 +114,48 @@
                 .audio-player {
                     width: 100px; /* Điều chỉnh kích thước theo ý muốn */
                 }
+                .play-button {
+                    margin-top: 10px; /* Khoảng cách giữa audio và nút */
+                    padding: 10px 20px; /* Kích thước của nút */
+                    background-color: #4CAF50; /* Màu nền của nút */
+                    color: white; /* Màu chữ */
+                    border: none; /* Không viền */
+                    border-radius: 5px; /* Bo góc */
+                    cursor: pointer; /* Con trỏ chuột khi hover */
+                }
+                .play-button:hover {
+                    background-color: #45a049; /* Màu nền khi hover */
+                }
             </style>
         </head>
         <body>
-            <audio controls autoplay muted class="audio-player">
-                <source src="image/em-dong-y-i-do-duc-phuc-911-khac-hung-nhacchuongviet.com.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
+        
+            <!-- Thẻ audio không có thuộc tính autoplay -->
+            <audio id="audioplayer" src="image/em-dong-y-i-do-duc-phuc-911-khac-hung-nhacchuongviet.com.mp3" type="audio/mpeg" loop="loop"></audio>
+        
+            <!-- Nút phát âm thanh -->
+            <button class="play-button" id="playButton">Phát Âm Thanh</button>
         
             <script>
-                // Bỏ tắt âm thanh khi trang tải xong
-                document.querySelector('.audio-player').muted = false;
+                // Lấy đối tượng audio và nút
+                const audio = document.getElementById("audioplayer");
+                const playButton = document.getElementById("playButton");
+        
+                // Phát âm thanh khi trang được tải
+                window.onload = function() {
+                    audio.play().catch(function(error) {
+                        console.log("Âm thanh không thể phát tự động:", error);
+                    });
+                };
+        
+                // Thêm sự kiện khi nhấn nút
+                playButton.addEventListener("click", function() {
+                    audio.play().catch(function(error) {
+                        console.log("Âm thanh không thể phát:", error);
+                    });
+                });
             </script>
-
+        
         </body>
           
           <div>
