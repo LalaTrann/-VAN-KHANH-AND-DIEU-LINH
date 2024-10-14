@@ -98,7 +98,7 @@
             <h2 class="title">Nguyễn Khánh & Diệu Linh</h2>
             <h4 class="subtitle tempatwaktu">
               
-                HÀ NỘI, 23 OCTOBER 2024 
+                HÀ NỘI, 23 THÁNG 10 NĂM 2024 
                 </br>
                 126 PHÙ ĐỔNG, GIA LÂM, HÀ NỘI
                 </br>
@@ -106,9 +106,8 @@
               
             </h4>
           </div>
-          <!-- Start Countdown -->       
           <div>
-            <ul id="hitungmundur" >
+            <ul id="hitungmundur">
               <li><span class="days">23</span><p class="days_text">DAY</p></li>
               <li class="separator">:</li>
               <li><span class="hours">16</span><p class="hours_text">HOURS</p></li>
@@ -117,26 +116,32 @@
               <li class="separator">:</li>
               <li><span class="seconds">00</span><p class="seconds_text">SECONDS</p></li>
             </ul>
-            <div class="spasi">
-            </div>
-            <script type="text/javascript">
-              var now = new Date();
-              var day = now.getDate();
-              var month = now.getMonth() + 1;
-              var year = now.getFullYear() + 1;
+            <div class="spasi"></div>
           
-              var nextyear = month + '/' + day + '/' + year + ' 07:07:07';
-              var harih = '03/21/2020 17:00:00';
-
-              $('#hitungmundur').countdown({
-                date: harih, // TODO Date format: 07/27/2017 17:00:00
-                offset: +7, // TODO Your Timezone Offset
-                day: 'Hari',
-                days: 'Hari'
-              }, function () {
-                alert('Done!');
-              });
-            </script>  
+            <script type="text/javascript">
+              function updateCountdown() {
+                var countdownDate = new Date('October 23, 2024 00:00:00').getTime();
+                var now = new Date().getTime();
+                var distance = countdownDate - now;
+          
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+          
+                document.querySelector('.days').innerHTML = days;
+                document.querySelector('.hours').innerHTML = hours;
+                document.querySelector('.minutes').innerHTML = minutes;
+                document.querySelector('.seconds').innerHTML = seconds;
+          
+                if (distance < 0) {
+                  clearInterval(countdownInterval);
+                  document.getElementById('hitungmundur').innerHTML = "Countdown finished";
+                }
+              }
+          
+              var countdownInterval = setInterval(updateCountdown, 1000); // Cập nhật mỗi giây
+            </script>
           </div>
           <!-- End Countdown -->
         </div>
@@ -274,7 +279,6 @@
               <br>
               126 PHÙ ĐỔNG, GIA LÂM, HÀ NỘI 
               <br>
-              Kec. Bekasi Barat, Kota Bekasi, Jawa Barat
               <br>
             </p>
           </div>
@@ -311,9 +315,9 @@
           <div class="tile is-parent">
             <article class="tile is-child foto1 notification foto1" data-aos="fade-up" data-aos-easing="linear">
               <div class="content">
-                <p class="title-foto">03/02/2023</p>
+                <p class="title-foto"></p>
                 <p class="subtitle-foto">
-                  Ngày Bắt Đầu Yêu <a href="" target="_blank"></a>
+                  <a href="" target="_blank"></a>
                 </p>
               </div>
             </article>
@@ -322,10 +326,10 @@
             <article class="tile is-child notification foto2" data-aos="fade-up" data-aos-easing="linear">
               <div class="content">
                 <p class="title-foto">
-                  April 2023
+              
                 </p>
                 <p class="subtitle-foto">
-                  Hạ Long
+                  
                 </p>   
               </div>            
             </article>
@@ -334,10 +338,10 @@
             <article class="tile is-child notification foto3" data-aos="fade-up" data-aos-easing="linear">
               <div class="content">  
                 <p class="title-foto">
-                  September 2023
+                 
                 </p>
                 <p class="subtitle-foto">
-                   Tà Xùa
+                   
                 </p>
               </div>
             </article>
@@ -347,30 +351,73 @@
       <div class="space24px"></div>
       <div class="tile is-ancestor">
         <div class="tile is-parent">
-          <article class="tile is-child notification foto6" data-aos="fade-up" data-aos-easing="linear">
+          <!-- <article class="tile is-child notification foto6" data-aos="fade-up" data-aos-easing="linear">
             <div class="content">
               <p class="title-foto">Juni 2019</p>
               <p class="subtitle-foto">Pertemuan 2 keluarga</p>
             </div>
-          </article>
+          </article> -->
         </div>
         <div class="tile is-parent">
           <article class="tile is-child notification foto4" data-aos="fade-up" data-aos-easing="linear">
             <div class="content">
-              <p class="title-foto">Desember 2019</p>
-              <p class="subtitle-foto">Lamaran</p>
+              <p class="title-foto"></p>
+              <p class="subtitle-foto"></p>
             </div>
           </article>
         </div>
         <div class="tile is-parent">              
-          <article class="tile is-child notification foto5" data-aos="fade-up" data-aos-easing="linear">
+          <!-- <article class="tile is-child notification foto5" data-aos="fade-up" data-aos-easing="linear">
             <div class="content">
               <p class="title-foto">Maret 2020</p>
               <p class="subtitle-foto">Menikah</p>
             </div>
-          </article>
+          </article> -->
         </div>
       </div>   
+      <div class="section-title">
+        <h2>KHOẢNH KHẮC NGỌT NGÀO</h2>
+        <p>Mình cùng bên nhau, những khoảnh khắc thăng hoa của tình yêu! Cảm ơn em đã xuất hiện trong cuộc sống của anh</p>
+      </div>
+      <div class="gallery-container">
+        <div class="gallery-item">
+            <img src="image/quang binh.jpg" alt="Image 1">
+        </div>
+        <div class="gallery-item">
+            <img src="image/ngay bat dau.jpg" alt="Image 2">
+        </div>
+        <div class="gallery-item">
+            <img src="image/ha long.jpg" alt="Image 3">
+        </div>
+        <div class="gallery-item">
+            <img src="image/ta xua.jpg" alt="Image 4">
+        </div>
+        <div class="gallery-item">
+          <img src="image/anh 1.jpg" alt="Image 5">
+        </div>
+        <div class="gallery-item">
+          <img src="image/anh 2.jpg" alt="Image 6">
+        </div>
+        <div class="gallery-item">
+          <img src="image/anh 3.jpg" alt="Image 7">
+        </div>
+        <div class="gallery-item">
+          <img src="image/anh 4.jpg" alt="Image 8">
+        </div>
+        <div class="gallery-item">
+          <img src="image/anh 5.jpg" alt="Image 9">
+      </div>
+      <div class="gallery-item">
+          <img src="image/ảnh 6.jpg" alt="Image 10">
+      </div>
+      <div class="gallery-item">
+          <img src="image/anh 7.jpg" alt="Image 11">
+      </div>
+      <div class="gallery-item">
+         <img src="image/anh 8.jpg" alt="Image 12">
+      </div>
+      
+    </div>
           <!-- IMAGES -->
           <div class="space40px"></div>
             <div data-aos="fade-up" data-aos-easing="linear">
@@ -383,24 +430,43 @@
         </div>
       </section>
       <!-- End Tentang Sherly dan Daeng -->
-      <div class="section-title">
-        <h2>KHOẢNH KHẮC NGỌT NGÀO</h2>
-        <p>Mình cùng bên nhau, những khoảnh khắc thăng hoa của tình yêu! Cảm ơn em đã xuất hiện trong cuộc sống của anh</p>
-      </div>
+     
       
-      <div class="gallery">
+      <!-- <div class="gallery">
         <div class="gallery-item">
-          <img src="quang binh.jpg" alt="Image 1">
+          <img src="image/quang binh.jpg" alt="Image 1">
         </div>
         <div class="gallery-item">
-          <img src="ngay bat dau.jpg" alt="Image 2">
+          <img src="image/ngay bat dau.jpg" alt="Image 2">
         </div>
         <div class="gallery-item">
-          <img src="ha long.jpg" alt="Image 3">
+          <img src="image/ha long.jpg" alt="Image 3">
         </div>
         <div class="gallery-item">
-          <img src="ta xua.jpg" alt="Image 4">
-        </div>
+          <img src="image/ta xua.jpg" alt="Image 4">
+        </div> -->
+        <!-- <div class="gallery">
+          <div class="gallery-item">
+            <img src="image/quang binh.jpg" alt="Image 1">
+          </div>
+          <div class="gallery-item">
+            <img src="image/ngay bat dau.jpg" alt="Image 2">
+          </div>
+          <div class="gallery-item">
+            <img src="image/ha long.jpg" alt="Image 3">
+          </div>
+          <div class="gallery-item">
+            <img src="image/ta xua.jpg" alt="Image 4">
+          </div>
+        </div> -->
+        
+      
+        <!-- <div class="image-container">
+          <img src="image/quang binh.jpg" alt="Image 1">
+          <img src="image/ngay bat dau.jpg" alt="Image 2">
+          <img src="image/ha long.jpg" alt="Image 3">
+          <img src="image/ta xua.jpg" alt="Image 4">
+      </div> -->
       </div>
       
       <!-- Begin RSVP Content -->
@@ -408,7 +474,7 @@
         <div class="container">
           <div class="columns is-multiline">          
             <div class="column is-12 prolog">
-              <h1 class="title has-text-centered section-title" data-aos="fade-up" data-aos-easing="linear">Xác nhận tham dự</h1>
+              <h1 class="title has-text-centered section-title" data-aos="fade-up" data-aos-easing="linear">BẠN SẼ ĐẾN CHUNG VUI VỚI CHÚNG MÌNH CHỨ</h1>
             </div>
             <div class="column is-12 prolog has-text-centered" data-aos="fade-up" data-aos-easing="linear">
               <p class="h2 subtitle">
@@ -425,7 +491,7 @@
                 <br>
                 Thank you!
                 </p>
-                <p><img src="path/to/anh-icon-fb.png" alt="Facebook" style="width:20px; height:20px;"></p>
+                <p><img src="image/anh icon fb.png" alt="Facebook" style="width:20px; height:20px;"></p>
                 <a href="https://www.facebook.com/profile.php?id=100006931088965" class="button btn-whatsapp" target="_blank" data-aos="zoom-in">
                     <i class="fab fa-whatsapp"></i>
                     &nbsp;&nbsp;Nguyễn Khánh
